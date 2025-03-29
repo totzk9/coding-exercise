@@ -117,7 +117,7 @@ If I want to move faster and avoid handling platform-specific logic, RevenueCat 
 3. RevenueCat talks to Apple, Google, or Stripe.
 4. I listen for webhook events in Supabase and update my DB.
 
-![RevenueCat Flow](./RevenueCat.png)
+![RevenueCat Flow](./screenshots/task3/RevenueCat.png)
 
 ---
 
@@ -131,4 +131,4 @@ If the requirements need tighter control or don’t want a dependency, Go straig
 3. Set up webhooks from Stripe/Apple/Google to inform Supabase of events.
 4. Supabase stores and updates subscription status accordingly.
 
-![Direct Integration Flow](./Vanilla.png)
+![Direct Integration Flow](./screenshots/task3/Vanilla.png)
