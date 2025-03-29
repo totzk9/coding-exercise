@@ -81,3 +81,71 @@ begin
 end;
 $$ language plpgsql stable set search_path = pg_catalog, public, pg_temp;
 ```
+
+---
+
+## 📸 Proof of Work by Tyrone Chris Abad
+
+This section includes screenshots and supporting evidence to verify implementation and correctness for each task.
+
+---
+
+### ✅ Task 1 – Edge Function (reverse-string, generate-random-number)
+
+**a. Deno test cases**
+
+- All tests executed using:
+```
+deno test --allow-env --allow-net --env-file=@app/tests/.env
+```
+
+![Deno Tests](./docs/screenshots/task1/deno-tests.png)
+
+**b. curl testing via local Supabase Edge Function**
+
+Command used:
+```
+curl "http://localhost:54321/functions/v1/reverse-string?text=This%20is%20a%20text." \
+  -H "Authorization: Bearer <ANON_KEY_HERE>"
+```
+
+![curl Output](./docs/screenshots/task1/curl-reverse-string.png)
+
+---
+
+### ✅ Task 2 – RLS on `courses_likes`
+
+**a. Test case coverage via Jest**
+
+Executed using:
+```
+yarn test
+```
+
+![Jest Tests](./docs/screenshots/task2/yarn-tests.png)
+
+**b. Manual RLS test via SQL**
+
+SQL executed inside Supabase Studio:
+
+Verified that only the user’s own liked courses are returned.
+
+![SQL RLS](./docs/screenshots/task2/sql-rls-check.png)
+
+---
+
+### ✅ Task 3 – Subscription Payment System Design
+
+A technical design document is located at:
+
+```
+/docs/subscription-design.md
+```
+
+This document outlines:
+- Direct integration using Stripe, Google Play, and Apple Pay
+- Alternative integration using RevenueCat
+- Access control strategies
+- Payment lifecycle handling
+
+![Design Doc Folder](./docs/screenshots/task3/doc-location.png)
