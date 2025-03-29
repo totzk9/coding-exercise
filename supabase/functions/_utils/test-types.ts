@@ -4,6 +4,12 @@ export type ReverseStringSuccessResponse = {
     length: number;
 };
 
+export type GenerateRandomNumberResponse = {
+    min: number;
+    max: number;
+    value: number;
+};
+
 export type ErrorResponse = {
     error: string;
     status: number;
